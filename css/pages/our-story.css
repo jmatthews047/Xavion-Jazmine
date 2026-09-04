@@ -1,0 +1,887 @@
+/* =========================================
+   THE BAKER WEDDING — OUR STORY PAGE
+========================================= */
+
+
+/* =========================================
+   PAGE HERO
+========================================= */
+
+.story-hero {
+    position: relative;
+    display: grid;
+    min-height: 72vh;
+    place-items: center;
+    padding: 9rem 1.5rem 6rem;
+    overflow: hidden;
+    background:
+        radial-gradient(
+            circle at 50% 45%,
+            rgba(19, 168, 184, 0.19),
+            transparent 34%
+        ),
+        linear-gradient(
+            120deg,
+            #070809,
+            #14191c 52%,
+            #08090a
+        );
+    color: var(--white);
+    text-align: center;
+}
+
+.story-hero::before,
+.story-hero::after {
+    content: "";
+    position: absolute;
+    width: 470px;
+    height: 470px;
+    border: 1px solid rgba(198, 200, 204, 0.12);
+    border-radius: 50%;
+}
+
+.story-hero::before {
+    bottom: -280px;
+    left: -210px;
+}
+
+.story-hero::after {
+    top: -260px;
+    right: -210px;
+}
+
+.story-hero-arch {
+    position: absolute;
+    top: 18%;
+    left: 50%;
+    width: min(72vw, 720px);
+    height: 72%;
+    border: 1px solid rgba(19, 168, 184, 0.3);
+    border-bottom: 0;
+    border-radius: 50% 50% 0 0;
+    transform: translateX(-50%);
+}
+
+.story-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 850px;
+}
+
+.story-hero .eyebrow {
+    color: var(--turquoise);
+}
+
+.story-hero h1 {
+    margin: 0 0 1.5rem;
+    color: var(--white);
+    font-family: var(--display-font);
+    font-size: clamp(4rem, 10vw, 8.5rem);
+    font-weight: 400;
+    letter-spacing: -0.04em;
+    line-height: 0.95;
+}
+
+.story-hero-content > p:not(.eyebrow) {
+    max-width: 610px;
+    margin: 0 auto;
+    color: var(--silver);
+    font-family: var(--serif-font);
+    font-size: 1.25rem;
+}
+
+.story-hero-ornament {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2rem;
+    margin-top: 2.5rem;
+}
+
+.story-hero-ornament > span {
+    width: 70px;
+    height: 1px;
+    background: linear-gradient(
+        to right,
+        transparent,
+        var(--silver)
+    );
+}
+
+.story-hero-ornament > span:last-child {
+    background: linear-gradient(
+        to right,
+        var(--silver),
+        transparent
+    );
+}
+
+.story-hero-ornament strong {
+    color: var(--white);
+    font-family: var(--serif-font);
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+
+/* =========================================
+   HOW WE MET
+========================================= */
+
+.how-we-met-section {
+    background: var(--soft-white);
+    color: var(--text-dark);
+}
+
+.story-feature-grid {
+    display: grid;
+    grid-template-columns: 1fr 0.82fr;
+    align-items: center;
+    gap: clamp(3rem, 8vw, 8rem);
+}
+
+.story-feature-content h2 {
+    color: var(--text-dark);
+}
+
+.story-feature-content > p:not(.section-label) {
+    color: var(--text-gray);
+    font-family: var(--serif-font);
+    font-size: 1.16rem;
+}
+
+.story-aside {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 1.8rem 0;
+    padding: 1.1rem 1.3rem;
+    border-left: 2px solid var(--turquoise);
+    background: var(--light-turquoise);
+}
+
+.story-aside span {
+    color: var(--deep-turquoise);
+}
+
+.story-aside p {
+    margin: 0;
+    color: var(--text-dark);
+    font-family: var(--serif-font);
+    font-size: 1.15rem;
+    font-style: italic;
+}
+
+.story-photo-wrapper {
+    width: 100%;
+    max-width: 520px;
+    margin: 0 auto;
+}
+
+.story-photo-wrapper img,
+.story-photo-placeholder {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+}
+
+.story-photo-placeholder {
+    position: relative;
+    display: grid;
+    place-content: center;
+    overflow: hidden;
+    border: 1px solid var(--silver);
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(19, 168, 184, 0.2),
+            transparent 42%
+        ),
+        linear-gradient(
+            145deg,
+            #111214,
+            #26282b
+        );
+    text-align: center;
+}
+
+.story-photo-border {
+    position: absolute;
+    inset: 1rem;
+    border: 1px solid rgba(19, 168, 184, 0.45);
+}
+
+.story-photo-monogram {
+    color: var(--white);
+    font-family: var(--display-font);
+    font-size: 3rem;
+}
+
+.story-photo-monogram span {
+    color: var(--turquoise);
+    font-family: var(--script-font);
+}
+
+.story-photo-placeholder p {
+    margin: 1rem 0 0;
+    color: var(--silver);
+    font-size: 0.65rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+
+/* =========================================
+   FIRST DATE
+========================================= */
+
+.first-date-section {
+    background:
+        radial-gradient(
+            circle at 15% 50%,
+            rgba(19, 168, 184, 0.12),
+            transparent 30%
+        ),
+        var(--black);
+}
+
+.first-date-grid {
+    display: grid;
+    grid-template-columns: 0.3fr 1fr 0.8fr;
+    align-items: center;
+    gap: clamp(2rem, 6vw, 6rem);
+}
+
+.first-date-number {
+    color: rgba(19, 168, 184, 0.25);
+    font-family: var(--display-font);
+    font-size: clamp(6rem, 13vw, 11rem);
+    line-height: 1;
+}
+
+.first-date-content h2 {
+    color: var(--white);
+}
+
+.first-date-content > p:not(.section-label) {
+    color: var(--silver);
+    font-family: var(--serif-font);
+    font-size: 1.14rem;
+}
+
+.first-date-details {
+    padding: 2.5rem;
+    border: 1px solid rgba(198, 200, 204, 0.3);
+    background: rgba(255, 255, 255, 0.025);
+    text-align: center;
+}
+
+.date-detail-label {
+    margin-bottom: 0.35rem;
+    color: var(--turquoise);
+    font-size: 0.64rem;
+    font-weight: 600;
+    letter-spacing: 0.19em;
+    text-transform: uppercase;
+}
+
+.date-detail-value {
+    margin-bottom: 0;
+    color: var(--white);
+    font-family: var(--serif-font);
+    font-size: 1.6rem;
+}
+
+.date-detail-divider {
+    margin: 1.25rem 0;
+    color: var(--turquoise);
+    font-size: 0.65rem;
+}
+
+
+/* =========================================
+   WHEN WE KNEW
+========================================= */
+
+.when-we-knew-section {
+    background: var(--soft-white);
+    color: var(--text-dark);
+}
+
+.love-letter-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 1120px;
+    margin: 0 auto;
+}
+
+.love-letter-card {
+    position: relative;
+    min-height: 700px;
+    padding: clamp(3rem, 6vw, 5rem);
+    overflow: hidden;
+    border: 1px solid var(--silver);
+    background: var(--white);
+}
+
+.dark-love-letter {
+    border-color: var(--turquoise);
+    background:
+        radial-gradient(
+            circle at 80% 15%,
+            rgba(19, 168, 184, 0.15),
+            transparent 32%
+        ),
+        var(--black);
+    color: var(--white);
+}
+
+.large-quote-mark {
+    position: absolute;
+    top: -2rem;
+    right: 1.5rem;
+    color: rgba(19, 168, 184, 0.15);
+    font-family: var(--serif-font);
+    font-size: 13rem;
+    line-height: 1;
+}
+
+.love-letter-label {
+    position: relative;
+    margin-bottom: 2rem;
+    color: var(--deep-turquoise);
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+.dark-love-letter .love-letter-label {
+    color: var(--turquoise);
+}
+
+.love-letter-card blockquote {
+    position: relative;
+    margin: 0;
+    color: var(--text-gray);
+    font-family: var(--serif-font);
+    font-size: clamp(1.18rem, 2vw, 1.4rem);
+    line-height: 1.65;
+}
+
+.dark-love-letter blockquote {
+    color: var(--silver);
+}
+
+.love-letter-signature {
+    margin: 2.5rem 0 0;
+    color: var(--text-dark);
+    font-family: var(--script-font);
+    font-size: 2.7rem;
+}
+
+.dark-love-letter .love-letter-signature {
+    color: var(--turquoise);
+}
+
+
+/* =========================================
+   PROPOSAL
+========================================= */
+
+.proposal-section {
+    background:
+        radial-gradient(
+            circle at 20% 50%,
+            rgba(19, 168, 184, 0.14),
+            transparent 28%
+        ),
+        var(--black);
+}
+
+.proposal-grid {
+    display: grid;
+    grid-template-columns: 0.65fr 1.2fr;
+    align-items: center;
+    gap: clamp(3rem, 8vw, 8rem);
+}
+
+.proposal-date-card {
+    position: relative;
+    padding: 4rem 2rem;
+    border: 1px solid var(--turquoise);
+    background: rgba(255, 255, 255, 0.025);
+    text-align: center;
+}
+
+.proposal-date-card::before {
+    content: "";
+    position: absolute;
+    inset: 12px;
+    border: 1px solid rgba(198, 200, 204, 0.25);
+}
+
+.proposal-month,
+.proposal-year {
+    position: relative;
+    margin: 0;
+    color: var(--silver);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+}
+
+.proposal-day {
+    position: relative;
+    margin: 0.4rem 0;
+    color: var(--turquoise);
+    font-family: var(--display-font);
+    font-size: clamp(6rem, 12vw, 10rem);
+    line-height: 0.9;
+}
+
+.proposal-date-ornament {
+    position: relative;
+    margin: 2rem 0 0.8rem;
+    color: var(--turquoise);
+}
+
+.proposal-answer {
+    position: relative;
+    margin: 0;
+    color: var(--white);
+    font-family: var(--script-font);
+    font-size: 2rem;
+}
+
+.proposal-content h2 {
+    color: var(--white);
+}
+
+.proposal-content > p:not(.section-label) {
+    color: var(--silver);
+    font-family: var(--serif-font);
+    font-size: 1.12rem;
+}
+
+
+/* =========================================
+   RELATIONSHIP TIMELINE
+========================================= */
+
+.relationship-timeline-section {
+    background: var(--soft-white);
+    color: var(--text-dark);
+}
+
+.relationship-timeline {
+    max-width: 900px;
+    margin: 4rem auto 0;
+}
+
+.timeline-entry {
+    display: grid;
+    grid-template-columns: 150px 35px 1fr;
+    gap: 1.5rem;
+    min-height: 190px;
+}
+
+.timeline-date {
+    color: var(--deep-turquoise);
+    font-family: var(--serif-font);
+    font-size: 1.25rem;
+    font-weight: 600;
+    text-align: right;
+}
+
+.timeline-date span {
+    display: block;
+    color: var(--text-gray);
+    font-family: var(--body-font);
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+}
+
+.timeline-marker {
+    position: relative;
+}
+
+.timeline-marker > span {
+    position: absolute;
+    top: 0.45rem;
+    left: 50%;
+    z-index: 2;
+    width: 13px;
+    height: 13px;
+    border: 3px solid var(--turquoise);
+    border-radius: 50%;
+    background: var(--soft-white);
+    transform: translateX(-50%);
+}
+
+.timeline-marker::after {
+    content: "";
+    position: absolute;
+    top: 1.2rem;
+    bottom: 0;
+    left: 50%;
+    width: 1px;
+    background: var(--silver);
+    transform: translateX(-50%);
+}
+
+.final-entry .timeline-marker::after {
+    display: none;
+}
+
+.timeline-label {
+    margin-bottom: 0.4rem;
+    color: var(--deep-turquoise);
+    font-size: 0.63rem;
+    font-weight: 600;
+    letter-spacing: 0.17em;
+    text-transform: uppercase;
+}
+
+.timeline-content h3 {
+    margin: 0 0 0.5rem;
+    color: var(--text-dark);
+    font-size: 1.7rem;
+}
+
+.timeline-content > p:last-child {
+    color: var(--text-gray);
+}
+
+
+/* =========================================
+   FAVORITE MEMORIES
+========================================= */
+
+.favorite-memories-section {
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(19, 168, 184, 0.1),
+            transparent 35%
+        ),
+        var(--black);
+    text-align: center;
+}
+
+.favorite-memories-section .section-heading > p:last-child {
+    color: var(--silver);
+}
+
+.memory-card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.memory-card {
+    position: relative;
+    display: flex;
+    min-height: 350px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 2rem;
+    border: 1px solid rgba(198, 200, 204, 0.25);
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.featured-memory {
+    border-color: var(--turquoise);
+    background: var(--soft-black);
+    transform: translateY(-1rem);
+}
+
+.memory-number {
+    position: absolute;
+    top: 1rem;
+    left: 1.2rem;
+    color: var(--dark-silver);
+    font-family: var(--serif-font);
+}
+
+.memory-icon {
+    color: var(--turquoise);
+    font-size: 1.3rem;
+}
+
+.memory-card h3 {
+    margin: 1rem 0;
+    color: var(--white);
+    font-size: 2rem;
+}
+
+.memory-card > p:last-child {
+    max-width: 250px;
+    margin-bottom: 0;
+    color: var(--silver);
+}
+
+
+/* =========================================
+   FUN FACTS
+========================================= */
+
+.story-facts-section {
+    background: var(--soft-white);
+    color: var(--text-dark);
+}
+
+.story-facts-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    max-width: 1250px;
+    margin: 0 auto;
+    border: 1px solid var(--silver);
+    background: var(--white);
+}
+
+.story-fact-card {
+    min-height: 250px;
+    padding: 2.5rem 1.5rem;
+    border-right: 1px solid var(--silver);
+    text-align: center;
+}
+
+.story-fact-card:last-child {
+    border-right: 0;
+}
+
+.fact-number {
+    color: var(--deep-turquoise);
+    font-family: var(--script-font);
+    font-size: 1.8rem;
+}
+
+.story-fact-card h3 {
+    margin: 1rem 0;
+    color: var(--text-dark);
+    font-size: 1.4rem;
+    line-height: 1.15;
+}
+
+.story-fact-card > p:last-child {
+    margin-bottom: 0;
+    color: var(--text-gray);
+    font-size: 0.82rem;
+}
+
+
+/* =========================================
+   CLOSING SCRIPTURE
+========================================= */
+
+.story-scripture-section {
+    padding: clamp(5rem, 9vw, 8rem) var(--side-padding);
+    background: var(--turquoise);
+    color: var(--black);
+    text-align: center;
+}
+
+.story-scripture-ornament {
+    margin-bottom: 1rem;
+    color: var(--black);
+}
+
+.story-scripture-section blockquote {
+    margin: 0 0 1.5rem;
+    font-family: var(--serif-font);
+    font-size: clamp(2rem, 4.5vw, 3.7rem);
+    line-height: 1.25;
+}
+
+.story-scripture-section cite {
+    color: var(--black);
+    font-size: 0.7rem;
+    font-style: normal;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+
+/* =========================================
+   NEXT PAGE
+========================================= */
+
+.story-next-section {
+    padding: 4.5rem var(--side-padding);
+    background: var(--charcoal);
+    color: var(--white);
+}
+
+.story-next-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+}
+
+.story-next-container h2 {
+    margin-bottom: 0;
+    color: var(--white);
+    font-size: clamp(2rem, 4vw, 3.3rem);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1050px) {
+    .story-facts-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .story-fact-card {
+        border-bottom: 1px solid var(--silver);
+    }
+
+    .story-fact-card:nth-child(even) {
+        border-right: 0;
+    }
+
+    .story-fact-card:last-child {
+        grid-column: 1 / -1;
+        border-bottom: 0;
+    }
+}
+
+
+@media (max-width: 900px) {
+    .story-feature-grid,
+    .proposal-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .story-photo-wrapper {
+        max-width: 560px;
+    }
+
+    .first-date-grid {
+        grid-template-columns: 0.3fr 1fr;
+    }
+
+    .first-date-details {
+        grid-column: 1 / -1;
+    }
+
+    .love-letter-grid {
+        grid-template-columns: 1fr;
+        max-width: 700px;
+    }
+
+    .love-letter-card {
+        min-height: 0;
+    }
+
+    .memory-card-grid {
+        grid-template-columns: 1fr;
+        max-width: 650px;
+        gap: 1rem;
+    }
+
+    .featured-memory {
+        transform: none;
+    }
+
+    .story-next-container {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+    .story-hero {
+        min-height: 650px;
+        padding-top: 8rem;
+    }
+
+    .story-hero-arch {
+        top: 20%;
+        width: 88vw;
+        height: 65%;
+    }
+
+    .story-hero-ornament > span {
+        width: 35px;
+    }
+
+    .first-date-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .first-date-number {
+        font-size: 6rem;
+    }
+
+    .first-date-details {
+        grid-column: auto;
+    }
+
+    .timeline-entry {
+        grid-template-columns: 80px 24px 1fr;
+        gap: 0.8rem;
+        min-height: 220px;
+    }
+
+    .timeline-date {
+        font-size: 1rem;
+    }
+
+    .story-facts-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .story-fact-card {
+        border-right: 0;
+        border-bottom: 1px solid var(--silver);
+    }
+
+    .story-fact-card:last-child {
+        grid-column: auto;
+    }
+}
+
+
+/* =========================================
+   SMALL PHONES
+========================================= */
+
+@media (max-width: 430px) {
+    .story-hero h1 {
+        font-size: 3.8rem;
+    }
+
+    .love-letter-card {
+        padding: 3rem 1.5rem;
+    }
+
+    .large-quote-mark {
+        font-size: 9rem;
+    }
+
+    .proposal-date-card {
+        padding-right: 1.25rem;
+        padding-left: 1.25rem;
+    }
+
+    .timeline-entry {
+        grid-template-columns: 65px 18px 1fr;
+    }
+}
