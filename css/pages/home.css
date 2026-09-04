@@ -728,3 +728,24 @@
     letter-spacing: 0.08em;
     text-transform: uppercase;
 }
+
+.countdown-complete {
+    grid-column: 1 / -1;
+    padding: 2rem;
+    text-align: center;
+}
+
+.countdown-complete p {
+    margin-bottom: 0.5rem;
+    color: var(--turquoise);
+    font-family: var(--script-font);
+    font-size: clamp(3rem, 7vw, 5rem);
+    line-height: 1.1;
+}
+
+.countdown-complete span {
+    color: var(--silver);
+    font-size: 0.7rem;
+    letter-spacing: 0.17em;
+    text-transform: uppercase;
+}

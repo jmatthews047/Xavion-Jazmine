@@ -750,3 +750,7 @@
         transition: none;
     }
 }
+
+body.lightbox-open {
+    overflow: hidden;
+}

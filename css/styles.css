@@ -459,3 +459,56 @@ h3 {
     color: #77777c;
     font-size: 0.68rem;
 }
+
+/* =========================================
+   MAIN JAVASCRIPT STYLES
+========================================= */
+
+/* Stop the page from scrolling behind the mobile menu */
+
+body.menu-open {
+    overflow: hidden;
+}
+
+
+/* Animate hamburger icon into an X */
+
+.menu-toggle span {
+    transform-origin: center;
+}
+
+.menu-toggle.active span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+
+/* Soft image entrance */
+
+img {
+    opacity: 0;
+    transition:
+        opacity 0.45s ease,
+        transform 0.45s ease;
+}
+
+img.loaded {
+    opacity: 1;
+}
+
+
+/* Keep reduced-motion preferences respected */
+
+@media (prefers-reduced-motion: reduce) {
+    img {
+        opacity: 1;
+        transition: none;
+    }
+}

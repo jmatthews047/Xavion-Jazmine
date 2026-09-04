@@ -887,83 +887,87 @@
 
 
         <!-- =========================
-             HASHTAG CAROUSEL
-        ========================== -->
+     HASHTAG CAROUSEL
+========================== -->
 
-        <section
-            class="hashtag-section"
-            aria-labelledby="hashtag-heading"
+<section
+    class="hashtag-section"
+    aria-labelledby="hashtag-heading"
+>
+
+    <div class="section-container">
+
+        <p class="section-label">
+            Celebrate With Us
+        </p>
+
+        <h2 id="hashtag-heading">
+            Share the Love
+        </h2>
+
+        <p class="hashtag-instructions">
+            Use any of our wedding hashtags when sharing
+            your favorite memories.
+        </p>
+
+        <div
+            class="hashtag-carousel"
+            aria-live="polite"
+            aria-atomic="true"
         >
 
-            <div class="section-container">
+            <p
+                class="hashtag-text"
+                id="hashtag-text"
+            >
+                #TheBakerWedding2028
+            </p>
 
-                <p class="section-label">
-                    Celebrate With Us
-                </p>
+        </div>
 
-                <h2 id="hashtag-heading">
-                    Share the love
-                </h2>
+        <div
+            class="hashtag-controls"
+            role="group"
+            aria-label="Choose a wedding hashtag"
+        >
 
-                <p class="hashtag-instructions">
-                    Use any of our wedding hashtags when sharing
-                    your favorite memories.
-                </p>
+            <button
+                class="hashtag-dot active"
+                type="button"
+                data-hashtag-index="0"
+                aria-label="Show The Baker Wedding 2028 hashtag"
+                aria-pressed="true"
+            ></button>
 
-                <div
-                    class="hashtag-carousel"
-                    aria-live="polite"
-                >
+            <button
+                class="hashtag-dot"
+                type="button"
+                data-hashtag-index="1"
+                aria-label="Show Meet the Bakers hashtag"
+                aria-pressed="false"
+            ></button>
 
-                    <p
-                        class="hashtag-text"
-                        id="hashtag-text"
-                    >
-                        #TheBakerWedding2028
-                    </p>
+            <button
+                class="hashtag-dot"
+                type="button"
+                data-hashtag-index="2"
+                aria-label="Show Jaz Found Her Baker hashtag"
+                aria-pressed="false"
+            ></button>
 
-                </div>
+            <button
+                class="hashtag-dot"
+                type="button"
+                data-hashtag-index="3"
+                aria-label="Show X J Forever hashtag"
+                aria-pressed="false"
+            ></button>
 
-                <div
-                    class="hashtag-controls"
-                    role="group"
-                    aria-label="Choose a wedding hashtag"
-                >
+        </div>
 
-                    <button
-                        class="hashtag-dot active"
-                        type="button"
-                        data-hashtag-index="0"
-                        aria-label="Show The Baker Wedding 2028 hashtag"
-                    ></button>
+    </div>
 
-                    <button
-                        class="hashtag-dot"
-                        type="button"
-                        data-hashtag-index="1"
-                        aria-label="Show Meet the Bakers hashtag"
-                    ></button>
-
-                    <button
-                        class="hashtag-dot"
-                        type="button"
-                        data-hashtag-index="2"
-                        aria-label="Show Jaz Found Her Baker hashtag"
-                    ></button>
-
-                    <button
-                        class="hashtag-dot"
-                        type="button"
-                        data-hashtag-index="3"
-                        aria-label="Show X J Forever hashtag"
-                    ></button>
-
-                </div>
-
-            </div>
-
-        </section>
-
+</section>
 
         <!-- =========================
              COMING SOON LINKS
@@ -1093,6 +1097,7 @@
     <script src="js/main.js"></script>
     <script src="js/countdown.js"></script>
     <script src="js/hashtag-carousel.js"></script>
+    
 
 </body>
 </html>
