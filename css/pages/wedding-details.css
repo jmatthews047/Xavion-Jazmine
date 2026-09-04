@@ -1,0 +1,900 @@
+/* =========================================
+   THE BAKER WEDDING — WEDDING DETAILS PAGE
+========================================= */
+
+
+/* =========================================
+   PAGE HERO
+========================================= */
+
+.details-hero {
+    position: relative;
+    display: grid;
+    min-height: 72vh;
+    place-items: center;
+    padding: 9rem 1.5rem 6rem;
+    overflow: hidden;
+    background:
+        radial-gradient(
+            circle at 50% 48%,
+            rgba(19, 168, 184, 0.19),
+            transparent 34%
+        ),
+        linear-gradient(
+            120deg,
+            #070809,
+            #14191c 52%,
+            #08090a
+        );
+    color: var(--white);
+    text-align: center;
+}
+
+.details-hero::before,
+.details-hero::after {
+    content: "";
+    position: absolute;
+    width: 470px;
+    height: 470px;
+    border: 1px solid rgba(198, 200, 204, 0.12);
+    border-radius: 50%;
+}
+
+.details-hero::before {
+    bottom: -280px;
+    left: -210px;
+}
+
+.details-hero::after {
+    top: -260px;
+    right: -210px;
+}
+
+.details-hero-arch {
+    position: absolute;
+    top: 18%;
+    left: 50%;
+    width: min(72vw, 720px);
+    height: 72%;
+    border: 1px solid rgba(19, 168, 184, 0.3);
+    border-bottom: 0;
+    border-radius: 50% 50% 0 0;
+    transform: translateX(-50%);
+}
+
+.details-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 850px;
+}
+
+.details-hero .eyebrow {
+    color: var(--turquoise);
+}
+
+.details-hero h1 {
+    margin: 0 0 1.5rem;
+    color: var(--white);
+    font-family: var(--display-font);
+    font-size: clamp(3.7rem, 9vw, 8rem);
+    font-weight: 400;
+    letter-spacing: -0.04em;
+    line-height: 0.95;
+}
+
+.details-hero-date {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2rem;
+    margin-top: 2.4rem;
+}
+
+.details-hero-date > span {
+    width: 70px;
+    height: 1px;
+    background: linear-gradient(
+        to right,
+        transparent,
+        var(--silver)
+    );
+}
+
+.details-hero-date > span:last-child {
+    background: linear-gradient(
+        to right,
+        var(--silver),
+        transparent
+    );
+}
+
+.details-hero-date p {
+    margin: 0;
+    color: var(--white);
+    font-family: var(--serif-font);
+    font-size: 1.35rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+.details-hero-location {
+    margin: 0.75rem 0 0;
+    color: var(--white);
+    font-size: 0.72rem;
+    letter-spacing: 0.23em;
+    text-transform: uppercase;
+}
+
+.date-pending-note {
+    margin: 0.8rem 0 0;
+    color: var(--silver);
+    font-family: var(--serif-font);
+    font-size: 1rem;
+    font-style: italic;
+}
+
+
+/* =========================================
+   DATE STATUS NOTICE
+========================================= */
+
+.date-status-section {
+    padding: 3.5rem var(--side-padding);
+    background: var(--turquoise);
+    color: var(--black);
+}
+
+.date-status-container {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 2rem;
+    max-width: 950px;
+}
+
+.status-icon {
+    display: grid;
+    width: 75px;
+    height: 75px;
+    place-items: center;
+    border: 1px solid rgba(11, 11, 13, 0.5);
+    border-radius: 50%;
+    color: var(--black);
+    font-size: 1.25rem;
+}
+
+.date-status-section .section-label {
+    margin-bottom: 0.4rem;
+    color: var(--black);
+}
+
+.status-copy h2 {
+    margin-bottom: 0.7rem;
+    color: var(--black);
+    font-size: clamp(2rem, 4vw, 3.2rem);
+}
+
+.status-copy p:last-child {
+    max-width: 750px;
+    margin-bottom: 0;
+}
+
+
+/* =========================================
+   CEREMONY AND RECEPTION
+========================================= */
+
+.event-details-section {
+    background: var(--soft-white);
+    color: var(--text-dark);
+}
+
+.event-card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(280px, 500px));
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.event-card {
+    position: relative;
+    display: flex;
+    min-height: 420px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3.5rem 2.5rem;
+    overflow: hidden;
+    border: 1px solid var(--silver);
+    background: var(--white);
+    text-align: center;
+    transition:
+        transform var(--transition),
+        box-shadow var(--transition),
+        border-color var(--transition);
+}
+
+.event-card:hover {
+    border-color: var(--turquoise);
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.08);
+    transform: translateY(-5px);
+}
+
+.featured-event-card {
+    border-color: var(--turquoise);
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(19, 168, 184, 0.14),
+            transparent 50%
+        ),
+        var(--black);
+    color: var(--white);
+}
+
+.event-card-number {
+    position: absolute;
+    top: 1.2rem;
+    left: 1.4rem;
+    color: var(--dark-silver);
+    font-family: var(--serif-font);
+    font-size: 0.9rem;
+}
+
+.event-card-icon {
+    margin-bottom: 1rem;
+    color: var(--turquoise);
+    font-size: 1.5rem;
+}
+
+.event-label {
+    margin-bottom: 0.75rem;
+    color: var(--deep-turquoise);
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+}
+
+.featured-event-card .event-label {
+    color: var(--turquoise);
+}
+
+.event-card h3 {
+    margin: 0 0 1rem;
+    color: var(--text-dark);
+    font-family: var(--serif-font);
+    font-size: clamp(2.1rem, 4vw, 3rem);
+    line-height: 1;
+}
+
+.featured-event-card h3 {
+    color: var(--white);
+}
+
+.event-card address {
+    margin: 0;
+    color: var(--text-gray);
+    font-size: 0.88rem;
+    font-style: normal;
+}
+
+.featured-event-card address {
+    color: var(--silver);
+}
+
+.event-time {
+    margin: 1.5rem 0 0;
+    padding-top: 1rem;
+    border-top: 1px solid var(--silver);
+    color: var(--text-dark);
+    font-family: var(--serif-font);
+    font-size: 1.1rem;
+    font-style: italic;
+}
+
+.featured-event-card .event-time {
+    border-color: rgba(198, 200, 204, 0.3);
+    color: var(--white);
+}
+
+.directions-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 3rem;
+}
+
+.venue-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.65rem;
+    padding-bottom: 0.25rem;
+    border-bottom: 1px solid var(--deep-turquoise);
+    color: var(--deep-turquoise);
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.13em;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+
+/* =========================================
+   VENUE FEATURE
+========================================= */
+
+.venue-feature-section {
+    background:
+        radial-gradient(
+            circle at 15% 50%,
+            rgba(19, 168, 184, 0.1),
+            transparent 30%
+        ),
+        var(--black);
+}
+
+.venue-feature-grid {
+    display: grid;
+    grid-template-columns: 0.9fr 1fr;
+    align-items: center;
+    gap: clamp(3rem, 8vw, 8rem);
+}
+
+.venue-image-wrapper {
+    width: 100%;
+    max-width: 570px;
+}
+
+.venue-image-wrapper img,
+.venue-photo-placeholder {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+}
+
+.venue-photo-placeholder {
+    position: relative;
+    display: grid;
+    place-content: center;
+    overflow: hidden;
+    border: 1px solid var(--silver);
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(19, 168, 184, 0.2),
+            transparent 42%
+        ),
+        linear-gradient(
+            145deg,
+            #111214,
+            #25272a
+        );
+    text-align: center;
+}
+
+.venue-placeholder-border {
+    position: absolute;
+    inset: 1rem;
+    border: 1px solid rgba(19, 168, 184, 0.45);
+}
+
+.venue-placeholder-icon {
+    color: var(--turquoise);
+    font-size: 2.3rem;
+}
+
+.venue-photo-placeholder p {
+    margin: 1rem 0 0;
+    color: var(--white);
+    font-family: var(--serif-font);
+    font-size: 1.7rem;
+}
+
+.venue-photo-placeholder p span {
+    display: block;
+    color: var(--silver);
+    font-family: var(--body-font);
+    font-size: 0.63rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+.venue-feature-content h2 {
+    color: var(--white);
+}
+
+.venue-feature-content > p:not(.section-label) {
+    color: var(--silver);
+    font-family: var(--serif-font);
+    font-size: 1.15rem;
+}
+
+.venue-address {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1rem;
+    margin: 2rem 0;
+    padding: 1.5rem;
+    border-left: 2px solid var(--turquoise);
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.venue-address-icon {
+    color: var(--turquoise);
+}
+
+.venue-address address {
+    color: var(--white);
+    font-style: normal;
+}
+
+.venue-confirmation-note {
+    color: var(--dark-silver) !important;
+    font-size: 0.95rem !important;
+    font-style: italic;
+}
+
+
+/* =========================================
+   DRESS CODE
+========================================= */
+
+.dress-code-section {
+    background: var(--soft-white);
+    color: var(--text-dark);
+}
+
+.dress-code-card {
+    max-width: 1080px;
+    margin: 0 auto;
+    border: 1px solid var(--silver);
+    background: var(--white);
+}
+
+.dress-code-heading {
+    padding: 4rem 2rem 3rem;
+    text-align: center;
+}
+
+.dress-code-heading h2 {
+    color: var(--text-dark);
+}
+
+.dress-code-heading > p:last-child {
+    max-width: 610px;
+    margin: 0 auto;
+    color: var(--text-gray);
+}
+
+.attire-guidelines {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border-top: 1px solid var(--silver);
+}
+
+.attire-column {
+    min-height: 330px;
+    padding: 3.5rem;
+}
+
+.attire-requested {
+    background: var(--light-turquoise);
+}
+
+.attire-restrictions {
+    background: var(--black);
+    color: var(--white);
+}
+
+.attire-symbol {
+    margin-bottom: 1rem;
+    color: var(--deep-turquoise);
+    font-size: 1.5rem;
+}
+
+.attire-restrictions .attire-symbol {
+    color: var(--turquoise);
+}
+
+.attire-column h3 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.attire-restrictions h3 {
+    color: var(--white);
+}
+
+.attire-column p {
+    color: var(--text-gray);
+}
+
+.attire-column ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.attire-column li {
+    position: relative;
+    padding: 0.55rem 0 0.55rem 1.5rem;
+    color: var(--silver);
+}
+
+.attire-column li::before {
+    content: "—";
+    position: absolute;
+    left: 0;
+    color: var(--turquoise);
+}
+
+.dress-code-reminder {
+    margin: 0;
+    padding: 1.5rem 2rem;
+    background: var(--turquoise);
+    color: var(--black);
+    font-family: var(--serif-font);
+    font-size: 1.05rem;
+    text-align: center;
+}
+
+
+/* =========================================
+   PARKING AND TRANSPORTATION
+========================================= */
+
+.guest-arrival-section {
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(19, 168, 184, 0.1),
+            transparent 35%
+        ),
+        var(--black);
+    text-align: center;
+}
+
+.arrival-card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1150px;
+    margin: 0 auto;
+    border-top: 1px solid rgba(198, 200, 204, 0.25);
+}
+
+.arrival-card {
+    position: relative;
+    min-height: 300px;
+    padding: 3.5rem 2rem 2.5rem;
+    border-right: 1px solid rgba(198, 200, 204, 0.25);
+}
+
+.arrival-card:last-child {
+    border-right: 0;
+}
+
+.arrival-card-number {
+    position: absolute;
+    top: 0.8rem;
+    left: 1rem;
+    color: var(--dark-silver);
+    font-family: var(--serif-font);
+}
+
+.arrival-icon {
+    display: grid;
+    width: 48px;
+    height: 48px;
+    margin: 0 auto 1rem;
+    place-items: center;
+    border: 1px solid var(--turquoise);
+    border-radius: 50%;
+    color: var(--turquoise);
+    font-family: var(--serif-font);
+}
+
+.arrival-card h3 {
+    margin-bottom: 1rem;
+    color: var(--white);
+    font-size: 1.7rem;
+}
+
+.arrival-card p {
+    color: var(--silver);
+    font-size: 0.88rem;
+}
+
+.arrival-card a {
+    display: inline-flex;
+    gap: 0.6rem;
+    margin-top: 0.5rem;
+    padding-bottom: 0.2rem;
+    border-bottom: 1px solid var(--turquoise);
+    color: var(--turquoise);
+    font-size: 0.65rem;
+    letter-spacing: 0.12em;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+
+/* =========================================
+   SCHEDULE
+========================================= */
+
+.schedule-section {
+    background: var(--soft-white);
+    color: var(--text-dark);
+}
+
+.wedding-schedule {
+    max-width: 800px;
+    margin: 3rem auto 0;
+}
+
+.schedule-hidden {
+    display: none;
+}
+
+.schedule-item {
+    display: grid;
+    grid-template-columns: 120px 25px 1fr;
+    gap: 1rem;
+    min-height: 130px;
+}
+
+.schedule-time {
+    margin: 0;
+    color: var(--deep-turquoise);
+    font-family: var(--serif-font);
+    font-size: 1.15rem;
+    text-align: right;
+}
+
+.schedule-marker {
+    position: relative;
+    display: block;
+    width: 11px;
+    height: 11px;
+    margin-top: 0.55rem;
+    border: 2px solid var(--turquoise);
+    border-radius: 50%;
+    background: var(--soft-white);
+}
+
+.schedule-marker::after {
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: 3px;
+    width: 1px;
+    height: 105px;
+    background: var(--silver);
+}
+
+.schedule-item:last-child .schedule-marker::after {
+    display: none;
+}
+
+.schedule-item h3 {
+    margin: 0;
+    color: var(--text-dark);
+    font-size: 1.55rem;
+}
+
+.schedule-item div p {
+    color: var(--text-gray);
+}
+
+
+/* =========================================
+   SCRIPTURE
+========================================= */
+
+.details-scripture-section {
+    padding: clamp(5rem, 9vw, 8rem) var(--side-padding);
+    background: var(--turquoise);
+    color: var(--black);
+    text-align: center;
+}
+
+.details-scripture-section .section-container {
+    max-width: 940px;
+}
+
+.scripture-ornament {
+    margin-bottom: 1.2rem;
+    color: var(--black);
+    font-size: 1.15rem;
+}
+
+.details-scripture-section blockquote {
+    margin: 0 0 1.5rem;
+    font-family: var(--serif-font);
+    font-size: clamp(2rem, 4.5vw, 3.7rem);
+    line-height: 1.25;
+}
+
+.details-scripture-section cite {
+    color: var(--black);
+    font-size: 0.7rem;
+    font-style: normal;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+
+/* =========================================
+   FINAL UPDATE
+========================================= */
+
+.details-update-section {
+    padding: 4.5rem var(--side-padding);
+    background: var(--charcoal);
+    color: var(--white);
+}
+
+.details-update-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+}
+
+.details-update-container > div {
+    max-width: 780px;
+}
+
+.details-update-section .section-label {
+    color: var(--turquoise);
+}
+
+.details-update-section h2 {
+    margin-bottom: 0;
+    color: var(--white);
+    font-size: clamp(2rem, 4vw, 3.2rem);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+    .venue-feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .venue-image-wrapper {
+        margin: 0 auto;
+    }
+
+    .arrival-card-grid {
+        grid-template-columns: 1fr;
+        max-width: 650px;
+    }
+
+    .arrival-card {
+        min-height: 0;
+        border-right: 0;
+        border-bottom: 1px solid rgba(198, 200, 204, 0.25);
+    }
+
+    .arrival-card:last-child {
+        border-bottom: 0;
+    }
+
+    .details-update-container {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+    .details-hero {
+        min-height: 650px;
+        padding-top: 8rem;
+    }
+
+    .details-hero-arch {
+        top: 20%;
+        width: 88vw;
+        height: 65%;
+    }
+
+    .details-hero-date {
+        gap: 0.6rem;
+    }
+
+    .details-hero-date > span {
+        width: 28px;
+    }
+
+    .details-hero-date p {
+        font-size: 1rem;
+        letter-spacing: 0.13em;
+    }
+
+    .date-status-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .status-icon {
+        margin: 0 auto;
+    }
+
+    .event-card-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .event-card {
+        min-height: 370px;
+    }
+
+    .attire-guidelines {
+        grid-template-columns: 1fr;
+    }
+
+    .attire-column {
+        min-height: 0;
+        padding: 3rem 1.5rem;
+    }
+
+    .directions-container {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .directions-container .button {
+        width: 100%;
+    }
+
+    .venue-link {
+        align-self: center;
+    }
+}
+
+
+/* =========================================
+   SMALL PHONES
+========================================= */
+
+@media (max-width: 430px) {
+    .details-hero h1 {
+        font-size: 3.5rem;
+    }
+
+    .event-card {
+        padding-right: 1.5rem;
+        padding-left: 1.5rem;
+    }
+
+    .dress-code-heading {
+        padding-right: 1.5rem;
+        padding-left: 1.5rem;
+    }
+
+    .venue-address {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .schedule-item {
+        grid-template-columns: 75px 18px 1fr;
+        gap: 0.6rem;
+    }
+
+    .schedule-time {
+        font-size: 0.9rem;
+    }
+}
