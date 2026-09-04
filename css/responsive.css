@@ -1,0 +1,730 @@
+/* =========================================
+   HOME PAGE
+========================================= */
+
+
+/* =========================================
+   HERO SECTION
+========================================= */
+
+.hero-section {
+    position: relative;
+    display: grid;
+    place-items: center;
+    min-height: 100svh;
+    padding: 9rem 1.5rem 6rem;
+    overflow: hidden;
+    background:
+        radial-gradient(
+            circle at 70% 45%,
+            rgba(19, 168, 184, 0.19),
+            transparent 29%
+        ),
+        linear-gradient(
+            120deg,
+            #070809 0%,
+            #12171a 55%,
+            #08090a 100%
+        );
+    color: var(--white);
+    text-align: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.1),
+            rgba(0, 0, 0, 0.35)
+        );
+}
+
+.hero-section::before,
+.hero-section::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: min(45vw, 680px);
+    height: min(45vw, 680px);
+    border: 1px solid rgba(198, 200, 204, 0.12);
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+
+.hero-section::before {
+    left: -28vw;
+}
+
+.hero-section::after {
+    right: -28vw;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.eyebrow {
+    color: var(--turquoise);
+}
+
+.hero-content h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(0.5rem, 2vw, 1.5rem);
+    margin: 0;
+    font-family: var(--display-font);
+    font-size: clamp(3.7rem, 10vw, 8.7rem);
+    font-weight: 400;
+    letter-spacing: -0.04em;
+    line-height: 0.9;
+}
+
+.hero-ampersand {
+    color: var(--turquoise);
+    font-family: var(--script-font);
+    font-size: 0.72em;
+    font-weight: 400;
+}
+
+.hero-date {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2rem;
+    margin: 2.7rem 0 0.3rem;
+}
+
+.hero-date p {
+    margin: 0;
+    font-family: var(--serif-font);
+    font-size: 1.3rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+.decorative-line {
+    width: 70px;
+    height: 1px;
+    background: linear-gradient(
+        to right,
+        transparent,
+        var(--silver)
+    );
+}
+
+.decorative-line:last-child {
+    background: linear-gradient(
+        to right,
+        var(--silver),
+        transparent
+    );
+}
+
+.hero-location {
+    margin-bottom: 0;
+    color: #dddddf;
+    font-size: 0.75rem;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+}
+
+.pending-notice {
+    margin: 0.8rem 0 2rem;
+    color: #afb0b4;
+    font-family: var(--serif-font);
+    font-size: 1rem;
+    font-style: italic;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.hero-decoration {
+    position: absolute;
+    z-index: 1;
+    width: min(44vw, 560px);
+    height: 72%;
+    border: 1px solid rgba(19, 168, 184, 0.27);
+    border-radius: 50% 50% 0 0;
+}
+
+.hero-decoration-left {
+    top: 14%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.hero-decoration-right {
+    display: none;
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 1.25rem;
+    z-index: 3;
+    display: grid;
+    gap: 0.2rem;
+    color: #a8a8ab;
+    font-size: 0.62rem;
+    letter-spacing: 0.16em;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.scroll-indicator span:last-child {
+    color: var(--turquoise);
+    font-size: 1rem;
+}
+
+
+/* =========================================
+   WELCOME SECTION
+========================================= */
+
+.welcome-section {
+    background: var(--soft-white);
+    text-align: center;
+}
+
+.welcome-message {
+    max-width: 690px;
+    margin-right: auto;
+    margin-left: auto;
+    color: #56565a;
+    font-family: var(--serif-font);
+    font-size: 1.25rem;
+}
+
+.couple-signature {
+    margin: 2rem 0 0;
+    font-family: var(--script-font);
+    font-size: 2.2rem;
+}
+
+.couple-signature span {
+    color: var(--turquoise);
+}
+
+
+/* =========================================
+   COUNTDOWN
+========================================= */
+
+.countdown-section {
+    text-align: center;
+}
+
+.countdown-section h2 {
+    margin-bottom: 3rem;
+    font-size: clamp(2.2rem, 4vw, 3.6rem);
+    font-weight: 400;
+}
+
+.countdown-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(110px, 170px));
+    justify-content: center;
+}
+
+.countdown-item {
+    padding: 1rem;
+    border-right: 1px solid rgba(198, 200, 204, 0.25);
+}
+
+.countdown-item:last-child {
+    border-right: 0;
+}
+
+.countdown-number {
+    display: block;
+    color: var(--turquoise);
+    font-family: var(--display-font);
+    font-size: clamp(2.8rem, 6vw, 5.5rem);
+    font-weight: 400;
+    line-height: 1;
+}
+
+.countdown-label {
+    display: block;
+    margin-top: 0.75rem;
+    color: #b8b8bb;
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+
+/* =========================================
+   QUICK WEDDING DETAILS
+========================================= */
+
+.quick-details-section {
+    background: var(--soft-white);
+}
+
+.details-card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1160px;
+    margin: 0 auto;
+}
+
+.detail-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 390px;
+    padding: 3.2rem 2.4rem;
+    border: 1px solid #dedede;
+    background: var(--white);
+    text-align: center;
+}
+
+.featured-card {
+    z-index: 2;
+    border-color: var(--turquoise);
+    background: var(--black);
+    color: var(--white);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.14);
+    transform: translateY(-1rem);
+}
+
+.card-number {
+    position: absolute;
+    top: 1rem;
+    left: 1.2rem;
+    color: #a0a0a4;
+    font-family: var(--serif-font);
+}
+
+.detail-icon {
+    color: var(--turquoise);
+    font-size: 1.6rem;
+}
+
+.detail-card h3 {
+    margin: 0.9rem 0;
+    font-family: var(--body-font);
+    font-size: 0.7rem;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+}
+
+.detail-feature {
+    margin: 0.4rem 0 1rem;
+    font-family: var(--serif-font);
+    font-size: 1.6rem;
+    line-height: 1.25;
+}
+
+.detail-description {
+    margin: 0;
+    color: #737378;
+    font-family: var(--body-font);
+    font-size: 0.85rem;
+    font-style: normal;
+}
+
+.featured-card .detail-description {
+    color: #bebec2;
+}
+
+.card-link {
+    margin-top: 1.2rem;
+    padding-bottom: 0.25rem;
+    border-bottom: 1px solid var(--turquoise);
+    color: var(--turquoise);
+    font-size: 0.68rem;
+    letter-spacing: 0.13em;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.details-button-container {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+
+/* =========================================
+   LATEST UPDATE
+========================================= */
+
+.latest-update-section {
+    padding: 3.5rem var(--side-padding);
+    background: var(--turquoise);
+    color: var(--black);
+}
+
+.update-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+}
+
+.latest-update-section .section-label {
+    margin-bottom: 0.4rem;
+    color: var(--black);
+}
+
+.latest-update-section h2 {
+    margin-bottom: 0.8rem;
+    font-size: clamp(2rem, 4vw, 3.4rem);
+}
+
+.update-content {
+    max-width: 800px;
+}
+
+.update-content p:last-child {
+    margin-bottom: 0;
+}
+
+.update-date {
+    min-width: 190px;
+    padding-left: 2rem;
+    border-left: 1px solid rgba(11, 11, 13, 0.4);
+}
+
+.update-date span {
+    display: block;
+    font-size: 0.68rem;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+}
+
+.update-date strong {
+    display: block;
+    font-family: var(--serif-font);
+    font-size: 1.15rem;
+    font-weight: 500;
+}
+
+
+/* =========================================
+   OUR STORY PREVIEW
+========================================= */
+
+.story-preview-section {
+    background: var(--soft-white);
+}
+
+.story-preview-grid {
+    display: grid;
+    grid-template-columns: 1fr 0.8fr;
+    align-items: center;
+    gap: clamp(3rem, 8vw, 8rem);
+}
+
+.story-preview-content > p:not(.section-label) {
+    color: #56565a;
+    font-family: var(--serif-font);
+    font-size: 1.15rem;
+}
+
+.story-photo-wrapper {
+    width: 100%;
+    max-width: 520px;
+    margin: 0 auto;
+}
+
+.story-photo-wrapper img,
+.photo-placeholder {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+}
+
+.photo-placeholder {
+    position: relative;
+    display: grid;
+    place-content: center;
+    overflow: hidden;
+    border: 1px solid var(--silver);
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(19, 168, 184, 0.18),
+            transparent 45%
+        ),
+        linear-gradient(
+            145deg,
+            #101012,
+            #252528
+        );
+    color: var(--silver);
+    text-align: center;
+}
+
+.photo-placeholder-border {
+    position: absolute;
+    inset: 1.1rem;
+    border: 1px solid rgba(19, 168, 184, 0.5);
+}
+
+.placeholder-monogram {
+    color: var(--white);
+    font-family: var(--display-font);
+    font-size: 3rem;
+}
+
+.placeholder-monogram span {
+    color: var(--turquoise);
+    font-family: var(--script-font);
+}
+
+.photo-placeholder p {
+    margin-bottom: 0;
+    font-size: 0.65rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+}
+
+
+/* =========================================
+   TRADITIONS
+========================================= */
+
+.traditions-section {
+    text-align: center;
+}
+
+.traditions-section .section-heading h2 {
+    font-weight: 400;
+}
+
+.traditions-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    max-width: 1300px;
+    margin: 0 auto;
+    border-top: 1px solid rgba(198, 200, 204, 0.25);
+}
+
+.tradition-card {
+    position: relative;
+    padding: 3rem 1.6rem;
+    border-right: 1px solid rgba(198, 200, 204, 0.25);
+}
+
+.tradition-card:last-child {
+    border-right: 0;
+}
+
+.tradition-number {
+    position: absolute;
+    top: 0.8rem;
+    left: 1rem;
+    color: var(--dark-silver);
+    font-family: var(--serif-font);
+}
+
+.tradition-icon {
+    color: var(--turquoise);
+    font-size: 1.25rem;
+}
+
+.tradition-card h3 {
+    margin: 1rem 0;
+    font-size: 1.45rem;
+    line-height: 1.15;
+}
+
+.tradition-card p {
+    margin-bottom: 0;
+    color: #b7b7bb;
+    font-size: 0.84rem;
+}
+
+
+/* =========================================
+   SCRIPTURE
+========================================= */
+
+.scripture-section {
+    background: var(--soft-white);
+    text-align: center;
+}
+
+.scripture-section blockquote {
+    margin: 1rem 0 1.5rem;
+    font-family: var(--serif-font);
+    font-size: clamp(2rem, 4vw, 3.6rem);
+    line-height: 1.25;
+}
+
+.scripture-section cite {
+    color: var(--deep-turquoise);
+    font-size: 0.7rem;
+    font-style: normal;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+
+/* =========================================
+   HASHTAG CAROUSEL
+========================================= */
+
+.hashtag-section {
+    padding: 6rem var(--side-padding);
+    overflow: hidden;
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(19, 168, 184, 0.15),
+            transparent 35%
+        ),
+        linear-gradient(
+            120deg,
+            #0c0c0e,
+            #19191c
+        );
+    color: var(--white);
+    text-align: center;
+}
+
+.hashtag-section h2 {
+    margin-bottom: 0.8rem;
+    font-weight: 400;
+}
+
+.hashtag-instructions {
+    max-width: 580px;
+    margin: 0 auto;
+    color: #b9b9bd;
+}
+
+.hashtag-carousel {
+    display: grid;
+    min-height: 120px;
+    place-items: center;
+}
+
+.hashtag-text {
+    margin: 1rem 0;
+    color: var(--turquoise);
+    font-family: var(--script-font);
+    font-size: clamp(2.2rem, 6vw, 4.8rem);
+    line-height: 1.2;
+    transition:
+        opacity var(--transition),
+        transform var(--transition);
+}
+
+.hashtag-text.changing {
+    opacity: 0;
+    transform: translateY(8px);
+}
+
+.hashtag-controls {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+}
+
+.hashtag-dot {
+    width: 9px;
+    height: 9px;
+    padding: 0;
+    border: 1px solid var(--silver);
+    border-radius: 50%;
+    background: transparent;
+    cursor: pointer;
+}
+
+.hashtag-dot.active {
+    border-color: var(--turquoise);
+    background: var(--turquoise);
+}
+
+
+/* =========================================
+   COMING SOON
+========================================= */
+
+.coming-soon-section {
+    background: var(--white);
+    text-align: center;
+}
+
+.coming-soon-section h2 {
+    max-width: 760px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.coming-soon-section > .section-container > p:not(.section-label) {
+    max-width: 650px;
+    margin-right: auto;
+    margin-left: auto;
+    color: var(--text-gray);
+}
+
+.coming-soon-links {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(240px, 360px));
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 3rem;
+}
+
+.coming-soon-card {
+    position: relative;
+    display: grid;
+    gap: 0.3rem;
+    padding: 2rem;
+    overflow: hidden;
+    border: 1px solid var(--silver);
+    background: var(--soft-white);
+    text-decoration: none;
+    transition:
+        border-color var(--transition),
+        color var(--transition),
+        transform var(--transition);
+}
+
+.coming-soon-card::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: var(--turquoise);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform var(--transition);
+}
+
+.coming-soon-card:hover {
+    border-color: var(--turquoise);
+    transform: translateY(-4px);
+}
+
+.coming-soon-card:hover::before {
+    transform: scaleX(1);
+}
+
+.coming-soon-card span {
+    font-family: var(--serif-font);
+    font-size: 1.75rem;
+}
+
+.coming-soon-card small {
+    color: var(--text-gray);
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
