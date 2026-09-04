@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Travel, airport, hotel, parking, and transportation information for Jazmine and Xavion’s Kansas City wedding."
+    >
+
+    <meta
+        name="theme-color"
+        content="#0B0B0D"
+    >
+
+    <title>Travel | Jazmine & Xavion</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Italiana&family=Montserrat:wght@400;500;600&family=Parisienne&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Website Styles -->
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/pages/travel.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+
+<body>
+
+    <!-- Accessibility Skip Link -->
+    <a class="skip-link" href="#main-content">
+        Skip to main content
+    </a>
+
+
+    <!-- =========================
+         HEADER AND NAVIGATION
+    ========================== -->
+
+    <header class="site-header" id="top">
+
+        <div class="header-container">
+
+            <a
+                class="site-logo"
+                href="../index.html"
+                aria-label="Jazmine and Xavion wedding homepage"
+            >
+                J<span>&</span>X
+            </a>
+
+            <button
+                class="menu-toggle"
+                type="button"
+                aria-expanded="false"
+                aria-controls="main-navigation"
+                aria-label="Open navigation menu"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav
+                class="main-navigation"
+                id="main-navigation"
+                aria-label="Main navigation"
+            >
+                <ul>
+                    <li>
+                        <a href="../index.html">
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="our-story.html">
+                            Our Story
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="wedding-party.html">
+                            Wedding Party
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="wedding-details.html">
+                            Wedding Details
+                        </a>
+                    </li>
+
+                    <li>
+                        <a
+                            class="active"
+                            href="travel.html"
+                        >
+                            Travel
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="gallery.html">
+                            Gallery
+                        </a>
+                    </li>
+
+                    <!--
+                    Add these links when the pages are ready.
+
+                    <li>
+                        <a href="registry.html">
+                            Registry
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="rsvp.html">
+                            RSVP
+                        </a>
+                    </li>
+                    -->
+
+                    <li>
+                        <a href="faq.html">
+                            FAQ
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <main id="main-content">
+
+
+        <!-- =========================
+             PAGE HERO
+        ========================== -->
+
+        <section
+            class="travel-hero"
+            aria-labelledby="travel-page-heading"
+        >
+
+            <div class="travel-hero-arch"></div>
+
+            <div class="travel-hero-content">
+
+                <p class="eyebrow">
+                    Join Us in Kansas City
+                </p>
+
+                <h1 id="travel-page-heading">
+                    Travel & Stay
+                </h1>
+
+                <p>
+                    Everything you’ll need to plan your trip for
+                    The Baker Wedding.
+                </p>
+
+                <div
+                    class="travel-hero-ornament"
+                    aria-hidden="true"
+                >
+                    <span></span>
+                    <strong>May 20, 2028</strong>
+                    <span></span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             TRAVEL INTRODUCTION
+        ========================== -->
+
+        <section
+            class="travel-introduction section-padding"
+            aria-labelledby="travel-introduction-heading"
+        >
+
+            <div class="section-container narrow-container">
+
+                <div
+                    class="small-ornament"
+                    aria-hidden="true"
+                >
+                    ✦
+                </div>
+
+                <p class="section-label">
+                    Welcome to Kansas City
+                </p>
+
+                <h2 id="travel-introduction-heading">
+                    We’re so glad you’re making the trip.
+                </h2>
+
+                <p>
+                    Travel and hotel information will continue to be
+                    added as wedding plans are finalized. Please check
+                    this page again before booking your stay.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             AIRPORT
+        ========================== -->
+
+        <section
+            class="airport-section section-dark"
+            aria-labelledby="airport-heading"
+        >
+
+            <div class="section-container airport-grid">
+
+
+                <!-- Airport Information -->
+
+                <div class="airport-content">
+
+                    <p class="section-label">
+                        Flying In
+                    </p>
+
+                    <h2 id="airport-heading">
+                        Kansas City International Airport
+                    </h2>
+
+                    <p class="airport-code">
+                        MCI
+                    </p>
+
+                    <p>
+                        Guests traveling by air should plan to fly into
+                        Kansas City International Airport.
+                    </p>
+
+                    <a
+                        class="airport-link"
+                        href="https://flykc.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Visit the Airport Website
+                        <span aria-hidden="true">↗</span>
+                    </a>
+
+                </div>
+
+
+                <!-- Airport Information Card -->
+
+                <div class="airport-info-card">
+
+                    <span
+                        class="airport-card-number"
+                        aria-hidden="true"
+                    >
+                        01
+                    </span>
+
+                    <div
+                        class="airport-icon"
+                        aria-hidden="true"
+                    >
+                        ✦
+                    </div>
+
+                    <p class="airport-card-label">
+                        Recommended Airport
+                    </p>
+
+                    <h3>
+                        Kansas City International Airport
+                    </h3>
+
+                    <p>
+                        Kansas City, Missouri
+                    </p>
+
+                    <div class="airport-distance">
+
+                        <span>Distance to Venue</span>
+
+                        <strong>
+                            To Be Confirmed
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             VENUE LOCATION
+        ========================== -->
+
+        <section
+            class="travel-venue-section section-padding"
+            aria-labelledby="travel-venue-heading"
+        >
+
+            <div class="section-container travel-venue-grid">
+
+
+                <!-- Venue Address Card -->
+
+                <article class="travel-venue-card">
+
+                    <p class="section-label">
+                        Wedding Location
+                    </p>
+
+                    <h2 id="travel-venue-heading">
+                        Avent Orangery
+                    </h2>
+
+                    <address>
+                        701 Village West Parkway
+                        <br>
+                        Kansas City, KS 66111
+                    </address>
+
+                    <p class="venue-date-notice">
+                        Venue and wedding date pending final
+                        confirmation.
+                    </p>
+
+                    <div class="venue-button-group">
+
+                        <a
+                            class="button button-dark"
+                            href="https://maps.google.com/?q=701+Village+West+Pkwy+Kansas+City+KS+66111"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Get Directions
+                        </a>
+
+                        <a
+                            class="travel-text-link"
+                            href="https://www.aventkc.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Venue Website
+                            <span aria-hidden="true">↗</span>
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Venue Graphic -->
+
+                <div
+                    class="travel-venue-graphic"
+                    aria-hidden="true"
+                >
+
+                    <div class="location-circle">
+
+                        <span class="location-marker">
+                            ◇
+                        </span>
+
+                        <p>
+                            Kansas City
+                            <strong>Kansas</strong>
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             TRANSPORTATION AND PARKING
+        ========================== -->
+
+        <section
+            class="transportation-section section-dark"
+            aria-labelledby="transportation-heading"
+        >
+
+            <div class="section-container">
+
+                <div class="section-heading">
+
+                    <p class="section-label">
+                        Getting Around
+                    </p>
+
+                    <h2 id="transportation-heading">
+                        Transportation & Parking
+                    </h2>
+
+                </div>
+
+
+                <div class="transportation-grid">
+
+
+                    <!-- Transportation -->
+
+                    <article class="transportation-card">
+
+                        <span
+                            class="transportation-number"
+                            aria-hidden="true"
+                        >
+                            01
+                        </span>
+
+                        <div
+                            class="transportation-icon"
+                            aria-hidden="true"
+                        >
+                            ◇
+                        </div>
+
+                        <h3>
+                            Guest Transportation
+                        </h3>
+
+                        <p>
+                            Guests will be responsible for arranging
+                            their own transportation to and from the
+                            wedding venue.
+                        </p>
+
+                    </article>
+
+
+                    <!-- Parking -->
+
+                    <article class="transportation-card">
+
+                        <span
+                            class="transportation-number"
+                            aria-hidden="true"
+                        >
+                            02
+                        </span>
+
+                        <div
+                            class="transportation-icon parking-icon"
+                            aria-hidden="true"
+                        >
+                            P
+                        </div>
+
+                        <h3>
+                            Venue Parking
+                        </h3>
+
+                        <p>
+                            Avent Orangery offers plenty of parking
+                            for wedding guests.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             HOTEL BLOCK
+        ========================== -->
+
+        <section
+            class="hotel-section section-padding"
+            aria-labelledby="hotel-heading"
+        >
+
+            <div class="section-container">
+
+                <div class="section-heading">
+
+                    <p class="section-label">
+                        Where to Stay
+                    </p>
+
+                    <h2 id="hotel-heading">
+                        Hotel Information
+                    </h2>
+
+                    <p>
+                        The venue offers hotel-block options. Official
+                        accommodations and booking details will be
+                        provided once they are confirmed.
+                    </p>
+
+                </div>
+
+
+                <div class="hotel-placeholder-card">
+
+                    <div
+                        class="hotel-placeholder-icon"
+                        aria-hidden="true"
+                    >
+                        ◇
+                    </div>
+
+                    <p class="hotel-status">
+                        Coming Soon
+                    </p>
+
+                    <h3>
+                        Official Hotel Block
+                    </h3>
+
+                    <p>
+                        Hotel name, nightly rate, booking code, and
+                        reservation deadline will be added here.
+                    </p>
+
+                    <div class="hotel-placeholder-details">
+
+                        <div>
+                            <span>Hotel</span>
+                            <strong>To Be Announced</strong>
+                        </div>
+
+                        <div>
+                            <span>Room Rate</span>
+                            <strong>To Be Announced</strong>
+                        </div>
+
+                        <div>
+                            <span>Booking Deadline</span>
+                            <strong>To Be Announced</strong>
+                        </div>
+
+                        <div>
+                            <span>Group Code</span>
+                            <strong>To Be Announced</strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!--
+                Replace the placeholder above with this structure
+                after the hotel block is confirmed:
+
+                <article class="confirmed-hotel-card">
+
+                    <p class="hotel-status">
+                        Official Hotel Block
+                    </p>
+
+                    <h3>[HOTEL NAME]</h3>
+
+                    <address>
+                        [HOTEL ADDRESS]
+                    </address>
+
+                    <div class="hotel-confirmed-details">
+
+                        <div>
+                            <span>Nightly Rate</span>
+                            <strong>[RATE]</strong>
+                        </div>
+
+                        <div>
+                            <span>Group Code</span>
+                            <strong>[CODE]</strong>
+                        </div>
+
+                        <div>
+                            <span>Book By</span>
+                            <strong>[DEADLINE]</strong>
+                        </div>
+
+                    </div>
+
+                    <a
+                        class="button button-dark"
+                        href="[BOOKING LINK]"
+                    >
+                        Reserve Your Room
+                    </a>
+
+                </article>
+                -->
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             NEARBY HOTELS
+        ========================== -->
+
+        <section
+            class="nearby-hotels-section section-dark"
+            aria-labelledby="nearby-hotels-heading"
+        >
+
+            <div class="section-container">
+
+                <div class="section-heading">
+
+                    <p class="section-label">
+                        More Options
+                    </p>
+
+                    <h2 id="nearby-hotels-heading">
+                        Nearby Hotels
+                    </h2>
+
+                    <p>
+                        Additional hotel recommendations near the venue
+                        will be added as wedding planning continues.
+                    </p>
+
+                </div>
+
+
+                <div class="nearby-hotel-grid">
+
+
+                    <article class="nearby-hotel-placeholder">
+
+                        <p class="placeholder-number">
+                            01
+                        </p>
+
+                        <div
+                            class="placeholder-symbol"
+                            aria-hidden="true"
+                        >
+                            ✦
+                        </div>
+
+                        <h3>
+                            Hotel Recommendation
+                        </h3>
+
+                        <p>
+                            Coming Soon
+                        </p>
+
+                    </article>
+
+
+                    <article class="nearby-hotel-placeholder">
+
+                        <p class="placeholder-number">
+                            02
+                        </p>
+
+                        <div
+                            class="placeholder-symbol"
+                            aria-hidden="true"
+                        >
+                            ✦
+                        </div>
+
+                        <h3>
+                            Hotel Recommendation
+                        </h3>
+
+                        <p>
+                            Coming Soon
+                        </p>
+
+                    </article>
+
+
+                    <article class="nearby-hotel-placeholder">
+
+                        <p class="placeholder-number">
+                            03
+                        </p>
+
+                        <div
+                            class="placeholder-symbol"
+                            aria-hidden="true"
+                        >
+                            ✦
+                        </div>
+
+                        <h3>
+                            Hotel Recommendation
+                        </h3>
+
+                        <p>
+                            Coming Soon
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             THINGS TO DO AND EAT
+        ========================== -->
+
+        <section
+            class="explore-section section-padding"
+            aria-labelledby="explore-heading"
+        >
+
+            <div class="section-container">
+
+                <div class="section-heading">
+
+                    <p class="section-label">
+                        Explore Kansas City
+                    </p>
+
+                    <h2 id="explore-heading">
+                        Things to Do & Places to Eat
+                    </h2>
+
+                    <p>
+                        Jazmine and Xavion’s recommendations for
+                        attractions and restaurants will be added
+                        closer to the wedding.
+                    </p>
+
+                </div>
+
+
+                <div class="explore-grid">
+
+
+                    <!-- Things to Do -->
+
+                    <article class="explore-card">
+
+                        <span
+                            class="explore-number"
+                            aria-hidden="true"
+                        >
+                            01
+                        </span>
+
+                        <div
+                            class="explore-icon"
+                            aria-hidden="true"
+                        >
+                            ◇
+                        </div>
+
+                        <p class="explore-label">
+                            Explore
+                        </p>
+
+                        <h3>
+                            Things to Do
+                        </h3>
+
+                        <p>
+                            Kansas City attraction recommendations
+                            are coming soon.
+                        </p>
+
+                    </article>
+
+
+                    <!-- Restaurants -->
+
+                    <article class="explore-card dark-explore-card">
+
+                        <span
+                            class="explore-number"
+                            aria-hidden="true"
+                        >
+                            02
+                        </span>
+
+                        <div
+                            class="explore-icon"
+                            aria-hidden="true"
+                        >
+                            ✦
+                        </div>
+
+                        <p class="explore-label">
+                            Dine
+                        </p>
+
+                        <h3>
+                            Places to Eat
+                        </h3>
+
+                        <p>
+                            Restaurant recommendations are coming soon.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             WEEKEND ITINERARY
+        ========================== -->
+
+        <section
+            class="weekend-section"
+            aria-labelledby="weekend-heading"
+        >
+
+            <div class="section-container weekend-container">
+
+                <div class="weekend-heading">
+
+                    <p class="section-label">
+                        The Wedding Weekend
+                    </p>
+
+                    <h2 id="weekend-heading">
+                        Weekend itinerary coming soon
+                    </h2>
+
+                    <p>
+                        Any additional wedding-weekend events will be
+                        added after they are confirmed.
+                    </p>
+
+                </div>
+
+                <div
+                    class="weekend-date"
+                    aria-label="Tentative wedding date"
+                >
+
+                    <span>May</span>
+
+                    <strong>20</strong>
+
+                    <span>2028</span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             TRAVEL REMINDER
+        ========================== -->
+
+        <section
+            class="travel-reminder-section"
+            aria-labelledby="travel-reminder-heading"
+        >
+
+            <div class="section-container travel-reminder-container">
+
+                <div>
+
+                    <p class="section-label">
+                        Before You Book
+                    </p>
+
+                    <h2 id="travel-reminder-heading">
+                        Please check back for confirmed information.
+                    </h2>
+
+                    <p>
+                        The wedding date and venue are still pending
+                        final confirmation.
+                    </p>
+
+                </div>
+
+                <a
+                    class="button button-primary"
+                    href="wedding-details.html"
+                >
+                    View Wedding Details
+                </a>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer class="site-footer">
+
+        <div class="footer-container">
+
+            <a
+                class="footer-monogram"
+                href="../index.html"
+                aria-label="Return to the wedding homepage"
+            >
+                J<span>&</span>X
+            </a>
+
+            <p class="footer-names">
+                Jazmine & Xavion
+            </p>
+
+            <p class="footer-date">
+                05 • 20 • 2028
+            </p>
+
+            <p class="footer-location">
+                The Baker Wedding
+                <span aria-hidden="true">•</span>
+                Kansas City, Kansas
+            </p>
+
+            <div class="footer-hashtags">
+                <span>#TheBakerWedding2028</span>
+                <span>#MeetTheBakers</span>
+                <span>#JazFoundHerBaker</span>
+                <span>#XJForever</span>
+            </div>
+
+            <a class="back-to-top" href="#top">
+                Back to Top
+                <span aria-hidden="true">↑</span>
+            </a>
+
+            <p class="copyright">
+                &copy; <span id="copyright-year"></span>
+                Jazmine Matthews & Xavion Baker
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- Shared Website JavaScript -->
+    <script src="../js/main.js"></script>
+
+</body>
+</html>
