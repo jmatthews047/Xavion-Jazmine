@@ -2,15 +2,14 @@
 /* =========================================
    THE BAKER WEDDING
    GALLERY CAROUSELS + LIGHTBOX
+   15 ENGAGEMENT + 21 COUPLES PHOTOS
 ========================================= */
 
 document.addEventListener("DOMContentLoaded", () => {
 
     /* =====================================
        PHOTO FOLDER LOCATIONS
-
-       These paths are relative to:
-       pages/gallery.html
+       Relative to pages/gallery.html
     ===================================== */
 
     const engagementFolder =
@@ -22,8 +21,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     /* =====================================
        ENGAGEMENT PHOTOS — 15 TOTAL
-
-       All filenames come from your folder.
     ===================================== */
 
     const engagementPhotos = [
@@ -50,51 +47,37 @@ document.addEventListener("DOMContentLoaded", () => {
 
     /* =====================================
        COUPLES PHOTOS — 21 TOTAL
-
-       Replace the placeholders with the
-       actual filenames from your couples folder.
-
-       No need to include the folder path.
     ===================================== */
 
     const couplesPhotos = [
 
-        "YOUR-COUPLE-PHOTO-01.jpg",
-        "YOUR-COUPLE-PHOTO-02.jpg",
-        "YOUR-COUPLE-PHOTO-03.jpg",
-        "YOUR-COUPLE-PHOTO-04.jpg",
-        "YOUR-COUPLE-PHOTO-05.jpg",
-        "YOUR-COUPLE-PHOTO-06.jpg",
-        "YOUR-COUPLE-PHOTO-07.jpg",
-        "YOUR-COUPLE-PHOTO-08.jpg",
-        "YOUR-COUPLE-PHOTO-09.jpg",
-        "YOUR-COUPLE-PHOTO-10.jpg",
-        "YOUR-COUPLE-PHOTO-11.jpg",
-        "YOUR-COUPLE-PHOTO-12.jpg",
-        "YOUR-COUPLE-PHOTO-13.jpg",
-        "YOUR-COUPLE-PHOTO-14.jpg",
-        "YOUR-COUPLE-PHOTO-15.jpg",
-        "YOUR-COUPLE-PHOTO-16.jpg",
-        "YOUR-COUPLE-PHOTO-17.jpg",
-        "YOUR-COUPLE-PHOTO-18.jpg",
-        "YOUR-COUPLE-PHOTO-19.jpg",
-        "YOUR-COUPLE-PHOTO-20.jpg",
-        "YOUR-COUPLE-PHOTO-21.jpg"
+        "JZRelationship1.jpg",
+        "JZRelationship2.jpg",
+        "JZRelationship3.jpg",
+        "JZRelationship4.jpg",
+        "JZRelationship5.jpg",
+        "JZRelationship6.jpg",
+        "JZRelationship7.jpg",
+        "JZRelationship8.jpg",
+        "JZRelationship9.jpg",
+        "JZRelationship10.jpg",
+        "JZRelationship11.jpg",
+        "JZRelationship12.jpg",
+        "JZRelationship13.jpg",
+        "JZRelationship14.jpg",
+        "JZRelationship15.jpg",
+        "JZRelationship16.jpg",
+        "JZRelationship17.jpg",
+        "JZRelationship18.jpg",
+        "JZRelationship19.jpg",
+        "JZRelationship20.jpg",
+        "JZRelationship21.jpg"
 
-    ].map(filename =>
-        filename.startsWith("YOUR-")
-            ? filename
-            : couplesFolder + filename
-    );
+    ].map(filename => couplesFolder + filename);
 
 
     /* =====================================
-       COLLECTIONS
-
-       01: Engagement photos 1–8
-       02: Engagement photos 9–15
-       03: Couples photos 1–11
-       04: Couples photos 12–21
+       FOUR PHOTO COLLECTIONS
     ===================================== */
 
     const collections = [
@@ -173,36 +156,7 @@ document.addEventListener("DOMContentLoaded", () => {
             `View ${type.toLowerCase()} photo ${number}`
         );
 
-
-        /* Placeholder if filename not entered */
-
-        if (!photoPath || photoPath.startsWith("YOUR-")) {
-
-            item.disabled = true;
-
-            item.appendChild(
-                createPlaceholder(number, "Photo Coming Soon")
-            );
-
-            return item;
-        }
-
-
-        /* Actual image */
-
         const image = document.createElement("img");
-
-        image.src = photoPath;
-
-        
-        image.addEventListener("load", () => {
-            console.log("PHOTO LOADED:", image.src);
-        });
-
-        image.addEventListener("error", () => {
-            console.error("PHOTO NOT FOUND:", image.src);
-        });
-
 
         image.alt =
             `Jazmine and Xavion ${type.toLowerCase()} photo ${number}`;
@@ -213,12 +167,13 @@ document.addEventListener("DOMContentLoaded", () => {
         image.loading = "lazy";
         image.decoding = "async";
 
-
-        /* Show message if image cannot be found */
+        image.addEventListener("load", () => {
+            console.log("PHOTO LOADED:", image.src);
+        });
 
         image.addEventListener("error", () => {
 
-            console.error("Could not load image:", photoPath);
+            console.error("PHOTO NOT FOUND:", image.src);
 
             item.disabled = true;
 
@@ -228,8 +183,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
         });
 
-
         item.appendChild(image);
+
+        image.src = photoPath;
 
         return item;
     }
@@ -290,7 +246,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 `.carousel-next[data-carousel="${id}"]`
             );
 
-
             function getScrollDistance() {
 
                 const firstItem =
@@ -313,7 +268,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 return firstItem.getBoundingClientRect().width + gap;
             }
 
-
             function updateButtons() {
 
                 const maxScroll =
@@ -330,7 +284,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             }
 
-
             previousButton?.addEventListener("click", () => {
 
                 carousel.scrollBy({
@@ -340,7 +293,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
             });
 
-
             nextButton?.addEventListener("click", () => {
 
                 carousel.scrollBy({
@@ -349,7 +301,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 });
 
             });
-
 
             carousel.addEventListener(
                 "scroll",
@@ -386,16 +337,18 @@ document.addEventListener("DOMContentLoaded", () => {
     const nextButton =
         document.querySelector(".lightbox-next");
 
-
     if (!lightbox || !lightboxImage) {
         console.warn("Gallery lightbox was not found.");
         return;
     }
 
-
     let activePhotoIndex = 0;
     let lastFocusedElement = null;
 
+
+    /* =====================================
+       GET AVAILABLE PHOTOS
+    ===================================== */
 
     function getAvailablePhotos() {
 
@@ -403,13 +356,15 @@ document.addEventListener("DOMContentLoaded", () => {
             document.querySelectorAll(
                 ".gallery-item:not(:disabled) img"
             )
-        ).filter(image => image.complete && image.naturalWidth > 0);
+        ).filter(image =>
+            image.complete && image.naturalWidth > 0
+        );
 
     }
 
 
     /* =====================================
-       SHOW PHOTO IN LIGHTBOX
+       DISPLAY LIGHTBOX PHOTO
     ===================================== */
 
     function displayPhoto(index) {
@@ -494,13 +449,14 @@ document.addEventListener("DOMContentLoaded", () => {
         lastFocusedElement?.focus();
     }
 
-
     document.querySelectorAll("[data-close-lightbox]")
         .forEach(element => {
 
             element.addEventListener("click", closeLightbox);
 
         });
+
+    closeButton?.addEventListener("click", closeLightbox);
 
 
     /* =====================================
@@ -589,7 +545,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }, { passive: true });
 
-
     lightbox.addEventListener("touchend", event => {
 
         const endX = event.changedTouches[0].screenX;
@@ -613,12 +568,16 @@ document.addEventListener("DOMContentLoaded", () => {
     }, { passive: true });
 
 
+    /* =====================================
+       INITIALIZATION COMPLETE
+    ===================================== */
+
     console.log(
         "Baker Wedding Gallery initialized:",
         engagementPhotos.length,
         "engagement photos and",
         couplesPhotos.length,
-        "couples photo slots."
+        "couples photos."
     );
 
 });
