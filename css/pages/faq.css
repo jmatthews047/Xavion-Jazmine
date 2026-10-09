@@ -1,0 +1,343 @@
+
+/* =========================================
+   THE BAKER WEDDING
+   FAQ PAGE — COMING SOON
+========================================= */
+
+/* =====================================
+   PAGE RESET
+===================================== */
+
+.faq-page {
+    margin: 0;
+    min-height: 100vh;
+    background: #101114;
+    color: #f8f7f5;
+}
+
+/* =====================================
+   MAIN PLACEHOLDER SECTION
+===================================== */
+
+.faq-placeholder {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    min-height: 100svh;
+    padding: 100px 24px;
+    overflow: hidden;
+    background:
+        radial-gradient(
+            circle at 50% 40%,
+            rgba(19, 168, 184, 0.07),
+            transparent 50%
+        ),
+        linear-gradient(
+            145deg,
+            #17191d,
+            #101114 65%,
+            #08090b
+        );
+    box-sizing: border-box;
+}
+
+/* =====================================
+   DECORATIVE CORNERS
+===================================== */
+
+.faq-decoration {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    pointer-events: none;
+}
+
+.faq-decoration-top {
+    top: 35px;
+    left: 35px;
+    border-top: 1px solid rgba(198, 200, 204, 0.45);
+    border-left: 1px solid rgba(198, 200, 204, 0.45);
+}
+
+.faq-decoration-bottom {
+    right: 35px;
+    bottom: 35px;
+    border-right: 1px solid rgba(198, 200, 204, 0.45);
+    border-bottom: 1px solid rgba(198, 200, 204, 0.45);
+}
+
+/* =====================================
+   CONTENT CONTAINER
+===================================== */
+
+.faq-content {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* =====================================
+   TOP ORNAMENT
+===================================== */
+
+.faq-ornament {
+    margin-bottom: 28px;
+    color: #13a8b8;
+    font-size: 28px;
+    line-height: 1;
+}
+
+/* =====================================
+   EYEBROW LABEL
+===================================== */
+
+.faq-eyebrow {
+    margin: 0 0 30px;
+    color: #13a8b8;
+    font-family: "Montserrat", sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+/* =====================================
+   MAIN HEADING
+===================================== */
+
+.faq-content h1 {
+    margin: 0;
+    color: #f8f7f5;
+    font-family: "Italiana", serif;
+    font-size: clamp(3.8rem, 8vw, 7.5rem);
+    font-weight: 400;
+    line-height: 1.15;
+    letter-spacing: -1px;
+}
+
+.faq-content h1 span {
+    display: block;
+    color: #c6c8cc;
+}
+
+/* =====================================
+   DECORATIVE DIVIDER
+===================================== */
+
+.faq-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+    max-width: 340px;
+    margin: 45px auto;
+}
+
+.faq-divider span {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(
+        to right,
+        transparent,
+        rgba(198, 200, 204, 0.6)
+    );
+}
+
+.faq-divider span:last-child {
+    background: linear-gradient(
+        to left,
+        transparent,
+        rgba(198, 200, 204, 0.6)
+    );
+}
+
+.faq-divider strong {
+    color: #13a8b8;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+/* =====================================
+   DESCRIPTION
+===================================== */
+
+.faq-description {
+    max-width: 620px;
+    margin: 0 auto;
+    color: #c6c8cc;
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(1.35rem, 2.5vw, 1.75rem);
+    font-weight: 400;
+    line-height: 1.65;
+}
+
+/* =====================================
+   COMING SOON LABEL
+===================================== */
+
+.faq-coming-soon {
+    display: inline-block;
+    margin: 40px 0 0;
+    padding: 15px 25px;
+    border-top: 1px solid rgba(19, 168, 184, 0.5);
+    border-bottom: 1px solid rgba(19, 168, 184, 0.5);
+    color: #13a8b8;
+    font-family: "Montserrat", sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+/* =====================================
+   MONOGRAM
+===================================== */
+
+.faq-monogram {
+    margin-top: 55px;
+    color: #f8f7f5;
+    font-family: "Italiana", serif;
+    font-size: 2.3rem;
+    letter-spacing: 0.15em;
+}
+
+.faq-monogram span {
+    color: #13a8b8;
+    font-family: "Cormorant Garamond", serif;
+    font-style: italic;
+}
+
+/* =====================================
+   BACK HOME LINK
+===================================== */
+
+.faq-home-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 45px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(198, 200, 204, 0.4);
+    color: #c6c8cc;
+    font-family: "Montserrat", sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-decoration: none;
+    transition:
+        color 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.faq-home-link:hover {
+    color: #13a8b8;
+    border-color: #13a8b8;
+}
+
+.faq-home-link:focus-visible {
+    outline: 2px solid #13a8b8;
+    outline-offset: 6px;
+}
+
+.faq-home-link span {
+    font-size: 18px;
+}
+
+/* =====================================
+   TABLET
+===================================== */
+
+@media (max-width: 900px) {
+
+    .faq-placeholder {
+        padding: 90px 35px;
+    }
+
+    .faq-content h1 {
+        font-size: clamp(4rem, 9vw, 6rem);
+    }
+
+}
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media (max-width: 600px) {
+
+    .faq-placeholder {
+        padding: 85px 25px;
+    }
+
+    .faq-decoration {
+        width: 55px;
+        height: 55px;
+    }
+
+    .faq-decoration-top {
+        top: 20px;
+        left: 20px;
+    }
+
+    .faq-decoration-bottom {
+        right: 20px;
+        bottom: 20px;
+    }
+
+    .faq-ornament {
+        margin-bottom: 22px;
+    }
+
+    .faq-eyebrow {
+        font-size: 9px;
+        letter-spacing: 3px;
+    }
+
+    .faq-content h1 {
+        font-size: clamp(3.3rem, 12vw, 4.8rem);
+    }
+
+    .faq-divider {
+        max-width: 240px;
+        margin: 35px auto;
+    }
+
+    .faq-description {
+        font-size: 1.35rem;
+    }
+
+    .faq-coming-soon {
+        margin-top: 35px;
+        padding: 14px 16px;
+        font-size: 9px;
+        letter-spacing: 2px;
+    }
+
+    .faq-monogram {
+        margin-top: 45px;
+        font-size: 2rem;
+    }
+
+    .faq-home-link {
+        margin-top: 35px;
+    }
+
+}
+
+/* =====================================
+   REDUCED MOTION
+===================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .faq-home-link {
+        transition: none;
+    }
+
+}
